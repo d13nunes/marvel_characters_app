@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeroCollectionCell" id="Mwe-h6-NRD" customClass="HeroCollectionCell" customModule="MarvelApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="424"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="424"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tuR-W6-hLy" customClass="URLImageView" customModule="MarvelApp" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="424"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fn9-bm-3j2">
+                        <rect key="frame" x="8" y="395.5" width="184" height="20.5"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HH4-T4-J0v">
+                                <rect key="frame" x="0.0" y="0.0" width="154" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SLI-QI-wIM" customClass="FavouriteButton" customModule="MarvelApp" customModuleProvider="target">
+                                <rect key="frame" x="164" y="0.5" width="20" height="20"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="QzA-m6-Znb"/>
+                                    <constraint firstAttribute="width" constant="20" id="ehO-ri-LLA"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="fn9-bm-3j2" firstAttribute="bottom" secondItem="Mwe-h6-NRD" secondAttribute="bottom" constant="-8" id="2Gs-X0-Iu1"/>
+                <constraint firstAttribute="leading" secondItem="fn9-bm-3j2" secondAttribute="leading" constant="-8" id="SzU-4h-blV"/>
+                <constraint firstItem="tuR-W6-hLy" firstAttribute="top" secondItem="Mwe-h6-NRD" secondAttribute="top" id="Ykg-Zm-9At"/>
+                <constraint firstAttribute="trailing" secondItem="fn9-bm-3j2" secondAttribute="trailing" constant="8" id="aEl-km-UvJ"/>
+                <constraint firstAttribute="trailing" secondItem="tuR-W6-hLy" secondAttribute="trailing" id="dQl-PA-Dkl"/>
+                <constraint firstAttribute="bottom" secondItem="tuR-W6-hLy" secondAttribute="bottom" id="luH-w8-Err"/>
+                <constraint firstItem="tuR-W6-hLy" firstAttribute="leading" secondItem="Mwe-h6-NRD" secondAttribute="leading" id="nJs-0w-Liz"/>
+            </constraints>
+            <size key="customSize" width="160" height="317"/>
+            <connections>
+                <outlet property="favouriteButton" destination="SLI-QI-wIM" id="Sed-EQ-vcK"/>
+                <outlet property="heroImage" destination="tuR-W6-hLy" id="SXg-OA-Rcm"/>
+                <outlet property="heroName" destination="HH4-T4-J0v" id="aWY-M9-L5W"/>
+            </connections>
+            <point key="canvasLocation" x="-256" y="-275.2623688155922"/>
+        </collectionViewCell>
+    </objects>
+</document>
