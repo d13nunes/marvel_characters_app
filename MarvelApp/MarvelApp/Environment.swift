@@ -14,10 +14,9 @@ struct Environment {
     let publicKey: String
 }
 
-fileprivate let dnunesEnv = Environment(baseURL: "https://gateway.marvel.com",
-                                        privateKey: "----PRIVATE-KEY----",
-                                        publicKey: "----PUBLIC-KEY----")
 extension Environment {
-    static let current = dnunesEnv
+//    static let current = Environment(baseURL: "https://gateway.marvel.com",
+//                                     privateKey: "----PRIVATE-KEY----",
+//                                     publicKey: "----PUBLIC-KEY----")
 }
 
